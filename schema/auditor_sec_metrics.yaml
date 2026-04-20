@@ -1,0 +1,120 @@
+# AuditorSEC v0.1 — Metrics Schema
+# UA Defensive Cyber Ecosystem Audit Framework
+# https://github.com/AuditorSEC-Initiative/auditor-sec
+
+schema_version: "0.1"
+created: "2026-04-20"
+context: "UA defensive cyber — громади, бізнес, критична інфраструктура"
+
+object_types:
+  - expert
+  - media
+  - technology
+
+# ──────────────────────────────────────────────
+# КЛАСТЕР A: ЕКСПЕРТИ / ОРГАНІЗАЦІЇ
+# ──────────────────────────────────────────────
+expert_metrics:
+  scoring_scale: [0, 1, 2, 3, 4, 5]
+  weights:
+    academic_depth: 0.20
+    practical_impact: 0.25
+    educational_activity: 0.20
+    regulatory_audit_fit: 0.20
+    ua_context_relevance: 0.15
+
+  dimensions:
+    academic_depth:
+      label: "Академічна глибина"
+      description: "Ступені, публікації, цитованість, PhD, участь у дослідженнях"
+      scoring_rubric:
+        0: "Немає публікацій, немає ступеня"
+        1: "Базова вища освіта, поодинокі статті"
+        2: "Магістр, кілька публікацій / доповідей"
+        3: "Аспірантура або активна публікаційна активність"
+        4: "PhD + регулярні публікації, цитованість"
+        5: "PhD + міжнародні публікації + активна дослідницька роль"
+
+    practical_impact:
+      label: "Практичний вплив"
+      description: "CISO/Head of InfoSec роль, робота з КІ, IR-досвід"
+      scoring_rubric:
+        0: "Немає досвіду практичної ролі"
+        1: "Junior-рівень, IT-досвід без security-фокусу"
+        2: "Security-фахівець середньої ланки"
+        3: "Head/Lead у комерційному секторі"
+        4: "CISO + КІ або IR на державному рівні"
+        5: "Національний рівень + публічний вплив + КІ + IR"
+
+    educational_activity:
+      label: "Освітня діяльність"
+      description: "Канали, курси, публічні лекції, робота з молоддю"
+      scoring_rubric:
+        0: "Немає освітнього контенту"
+        1: "Рідкі пости/статті"
+        2: "Регулярний канал або курс"
+        3: "Декілька каналів/курсів + лекції"
+        4: "Розгалужена освітня платформа"
+        5: "Школа/програма + університет + спільнота + YouTube"
+
+    regulatory_audit_fit:
+      label: "Регуляторна / аудиторська придатність"
+      description: "Сертифікації, стандарти, комплаєнс, участь у розробці політик"
+      scoring_rubric:
+        0: "Немає сертифікацій, немає регуляторного досвіду"
+        1: "Базові сертифікати (CompTIA тощо)"
+        2: "CEH або аналог + розуміння стандартів"
+        3: "CISM/ISO27001 + комплаєнс-проєкти"
+        4: "CISSP + участь у розробці політик"
+        5: "CISSP + держрегулятор + стандарти + аудиторська практика"
+
+    ua_context_relevance:
+      label: "Відповідність UA-контексту"
+      description: "Воєнні ризики, телеком, КІ, держпрограми, мова контенту"
+      scoring_rubric:
+        0: "Немає UA-фокусу"
+        1: "Загальний контент, не прив'язаний до UA"
+        2: "Частково UA-орієнтований"
+        3: "Стійкий UA-фокус (мова + теми)"
+        4: "UA КІ/держ + воєнний контекст"
+        5: "Системний вклад в UA кіберспільноту + держрівень"
+
+  output_fields:
+    - weighted_score    # float 0.0-5.0
+    - audit_fit         # low (<2.0) / medium (2.0-3.5) / high (>3.5)
+    - regulatory_fit
+    - educational_value
+    - verdict_tags
+
+# ──────────────────────────────────────────────
+# КЛАСТЕР B: МЕДІА / КАНАЛИ
+# ──────────────────────────────────────────────
+media_metrics:
+  scoring_scale: [0, 1, 2, 3, 4, 5]
+  weights:
+    defensive_ethical_focus: 0.25
+    content_quality_freshness: 0.20
+    career_educational_value: 0.20
+    practical_community_value: 0.20
+    noise_clickbait_penalty: 0.15
+
+  output_fields:
+    - weighted_score
+    - media_tier        # tier1 (>4.0) / tier2 (2.5-4.0) / tier3 (<2.5)
+    - recommended_for
+
+# ──────────────────────────────────────────────
+# КЛАСТЕР C: ТЕХНОЛОГІЧНІ ПІДХОДИ
+# ──────────────────────────────────────────────
+technology_metrics:
+  scoring_scale: [0, 1, 2, 3, 4, 5]
+  weights:
+    technology_readiness: 0.25
+    rd_vs_production_ratio: 0.20
+    ua_applicability: 0.30
+    regulatory_compatibility: 0.25
+
+  output_fields:
+    - weighted_score
+    - tech_tier         # research / pilot_ready / production_ready
+    - recommended_use_cases
