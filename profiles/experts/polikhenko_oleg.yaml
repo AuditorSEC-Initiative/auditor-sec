@@ -1,0 +1,53 @@
+# AuditorSEC - Expert Profile
+# Object: Oleg Polikhenko
+type: expert
+name: "Oleg Polikhenko"
+current_role: "Founder & Head @ CISO Club UA"
+affiliations:
+  - CISO Club UA
+  - Ukrainian cybersecurity community
+platforms:
+  linkedin: ""
+  telegram: ""
+  youtube: ""
+content_language: [uk, ru]
+activity_status: active
+audience_focus: [ciso, advanced, regulatory, enterprise]
+
+metrics_raw:
+  academic_depth: 2
+  practical_impact: 5
+  educational_activity: 4
+  regulatory_audit_fit: 4
+  ua_context_relevance: 5
+
+notes: |
+  Founder of CISO Club UA - the primary Ukrainian association
+  for Chief Information Security Officers. Strong practitioner
+  with deep enterprise/regulatory experience. Connects the
+  CISO community across public and private sectors.
+  Less academic output than Chakryan but high practical
+  and community-building impact. Key node for UA regulatory
+  cybersecurity policy and enterprise security standards.
+  Relevant to municipal/KI level via enterprise CISO network.
+
+verdict_tags:
+  - CISO-community-builder
+  - UA-enterprise-anchor
+  - regulatory-practitioner
+  - KI-network-node
+
+recommended_for:
+  - "enterprise security strategy consultations"
+  - "UA regulatory policy working groups"
+  - "AuditorSEC advisory board candidate"
+  - "municipal hub - CISO-level workshops"
+  - "connection bridge between municipal and enterprise security"
+
+# AuditorSEC score calculation:
+# academic_depth:        2 * 0.20 = 0.40
+# practical_impact:      5 * 0.25 = 1.25
+# educational_activity:  4 * 0.20 = 0.80
+# regulatory_audit_fit:  4 * 0.20 = 0.80
+# ua_context_relevance:  5 * 0.15 = 0.75
+# TOTAL: 4.00 / 5.00 - audit_fit: HIGH
