@@ -1,0 +1,49 @@
+# AuditorSEC - Media Profile
+# Object: Security Digest UA
+type: media
+name: Security Digest UA
+platforms:
+  telegram: "https://t.me/securitydigestua"
+  website: ""
+content_language: [uk]
+activity_status: active
+audience_focus: [intermediate, advanced, regulatory, ciso]
+founded_by: "Vadym Chakryan"
+
+metrics_raw:
+  defensive_ethical_focus: 5
+  content_quality_freshness: 5
+  career_educational_value: 3
+  practical_community_value: 4
+  noise_clickbait_penalty: 5
+
+notes: |
+  Flagship UA cybersecurity digest - high regulatory/audit fit.
+  Curated daily digest of UA and global infosec news.
+  Strong focus on actual incidents, CVEs, regulatory updates.
+  Less beginner-friendly than HackYourMom but significantly
+  more valuable for CISO/InfoSec leads and audit teams.
+  Noise-free, no clickbait - pure professional content.
+  Founded and curated by Vadym Chakryan (CISSP, DataArt).
+
+verdict_tags:
+  - UA-regulatory-anchor
+  - CISO-focused
+  - noise-free-digest
+  - audit-team-recommended
+  - chakryan-curated
+
+recommended_for:
+  - "CISO / InfoSec leads daily reading"
+  - "regulatory compliance teams"
+  - "critical infrastructure security teams"
+  - "AuditorSEC source for current threat landscape"
+  - "municipal hub - security officer level"
+
+# AuditorSEC score calculation:
+# defensive_ethical_focus:    5 * 0.25 = 1.25
+# content_quality_freshness:  5 * 0.20 = 1.00
+# career_educational_value:   3 * 0.20 = 0.60
+# practical_community_value:  4 * 0.20 = 0.80
+# noise_clickbait_penalty:    5 * 0.15 = 0.75
+# TOTAL: 4.40 / 5.00 - media_tier: TIER1
