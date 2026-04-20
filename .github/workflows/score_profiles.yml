@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
@@ -33,15 +35,12 @@ jobs:
       - name: Show scored results
         run: |
           echo "=== Scored JSON files ==="
-          find profiles -name "*.scored.json" | while read f; do
-            echo "--- $f ---"
-            cat "$f"
-          done
+          find profiles -name "*.scored.json" -print -exec cat {} \;
 
       - name: Commit scored results
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "chore: auto-scored profiles [skip ci]"
-          file_pattern: "profiles/**/*.scored.json"
-          commit_user_name: "AuditorSEC Bot"
-          commit_user_email: "bot@auditor-sec.ua"
+        run: |
+          git config user.name "AuditorSEC Bot"
+          git config user.email "bot@auditor-sec.ua"
+          git add profiles/**/*.scored.json || true
+          git diff --cached --quiet || git commit -m "chore: auto-scored profiles [skip ci]"
+          git push || true
