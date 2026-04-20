@@ -1,0 +1,73 @@
+# AuditorSEC - Technology Profile
+# Object: Qiskit VQC + PSO
+type: technology
+name: "Qiskit VQC + PSO"
+full_name: "Variational Quantum Classifier + Particle Swarm Optimization"
+framework: "IBM Qiskit / Qiskit Machine Learning"
+trl_level: 3
+open_source: true
+repo_reference: "https://github.com/Qiskit/qiskit-machine-learning"
+
+metrics_raw:
+  technology_readiness: 3
+  rd_vs_production_ratio: 2
+  ua_applicability: 4
+  regulatory_compatibility: 2
+
+use_cases_ua:
+  - id: UC1
+    name: "Classification of UA cyber resources"
+    description: >
+      VQC model classifies resources/experts by reliability
+      and regulatory fit. PSO optimizes ansatz parameters.
+    status: pilot_possible
+    dataset: "ua_resources_labeled.csv (manual labeling)"
+
+  - id: UC2
+    name: "Anomaly / Intrusion Detection (IDS)"
+    description: >
+      VQC+PSO on NSL-KDD dataset. Comparison with SVM,
+      RandomForest. Result integrated as Q-validated IDS
+      patterns in AuditorSEC.
+    status: pilot_possible
+    dataset: "NSL-KDD (public)"
+
+  - id: UC3
+    name: "Malicious Content / Sentiment Detection"
+    description: >
+      QML layer for malicious content detection via
+      sentiment analysis. Resonates with Chakryan's
+      publications. R&D module for AuditorSEC-QML.
+    status: research_only
+    dataset: "requires custom UA dataset"
+
+notes: |
+  Core edge-tech reference for AuditorSEC. Currently R&D/pilot
+  only, not production-ready. Primary value: positions
+  AuditorSEC as forward-looking framework tracking
+  quantum-ML trends in cyber defense.
+  Does NOT replace classical ML - complements it.
+  Can run on Qiskit Aer simulator locally - no quantum
+  hardware needed for MVP pilot.
+  Chakryan's publications on risk-aware routing and
+  malicious content detection directly relevant to UC3.
+
+verdict_tags:
+  - QML-RnD-module
+  - IDS-applicable
+  - AuditorSEC-QML-core
+  - not-production-ready-2026
+  - pilot-on-qiskit-aer
+
+recommended_for:
+  - "AuditorSEC-QML submodule (R&D layer)"
+  - "university research (NURE, KPI)"
+  - "conference demonstrations of edge-tech approaches"
+  - "NOT recommended for production KI systems before TRL 6+"
+
+# AuditorSEC score calculation:
+# technology_readiness:    3 * 0.25 = 0.75
+# rd_vs_production_ratio:  2 * 0.20 = 0.40
+# ua_applicability:        4 * 0.30 = 1.20
+# regulatory_compatibility:2 * 0.25 = 0.50
+# TOTAL: 2.85 / 5.00 - tech_tier: research
