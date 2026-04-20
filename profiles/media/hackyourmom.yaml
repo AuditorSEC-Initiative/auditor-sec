@@ -1,0 +1,44 @@
+# AuditorSEC — Media Profile
+# Об'єкт: HackYourMom
+type: media
+name: HackYourMom
+platforms:
+  youtube: "https://youtube.com/@HackYourMom"
+  telegram: "https://t.me/hackyourmom"
+  website: "https://hackyourmom.com"
+content_language: [uk]
+activity_status: active
+audience_focus: [beginner, intermediate, career_changers]
+
+metrics_raw:
+  defensive_ethical_focus: 5
+  content_quality_freshness: 4
+  career_educational_value: 5
+  practical_community_value: 3
+  noise_clickbait_penalty: 4
+
+notes: |
+  Найсильніший UA-ресурс для входження в кіберспеціальність.
+  Унікальна цінність: україномовний контент,
+  орієнтований на новачків та кар'єрний розвиток.
+  Слабке місце: менше контенту для КІ/регуляторного рівня.
+
+verdict_tags:
+  - UA-edu-top-tier
+  - career-oriented
+  - beginner-friendly
+  - ethical-hacking-anchor
+
+recommended_for:
+  - "освітні програми для молоді та перекваліфікантів"
+  - "муніципальні хаби — базова кіберграмотність"
+  - "університетські курси (вступний рівень)"
+  - "онбординг нових членів команди ІБ"
+
+# Розрахований AuditorSEC score:
+# defensive_ethical_focus:    5 * 0.25 = 1.25
+# content_quality_freshness:  4 * 0.20 = 0.80
+# career_educational_value:   5 * 0.20 = 1.00
+# practical_community_value:  3 * 0.20 = 0.60
+# noise_clickbait_penalty:    4 * 0.15 = 0.60
+# TOTAL: 4.25 / 5.00 → media_tier: TIER1
