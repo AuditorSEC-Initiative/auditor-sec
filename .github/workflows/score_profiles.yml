@@ -1,0 +1,47 @@
+name: AuditorSEC - Score Profiles
+
+on:
+  push:
+    paths:
+      - 'profiles/**'
+      - 'schema/**'
+      - 'scoring/**'
+  workflow_dispatch:
+
+jobs:
+  score:
+    name: Score all profiles
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run AuditorSEC scoring engine
+        run: python scoring/scorer.py
+
+      - name: Show scored results
+        run: |
+          echo "=== Scored JSON files ==="
+          find profiles -name "*.scored.json" | while read f; do
+            echo "--- $f ---"
+            cat "$f"
+          done
+
+      - name: Commit scored results
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-scored profiles [skip ci]"
+          file_pattern: "profiles/**/*.scored.json"
+          commit_user_name: "AuditorSEC Bot"
+          commit_user_email: "bot@auditor-sec.ua"
