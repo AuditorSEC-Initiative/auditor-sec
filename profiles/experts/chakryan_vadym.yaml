@@ -1,0 +1,54 @@
+# AuditorSEC — Expert Profile
+# Об'єкт: Вадим Чакрян
+type: expert
+name: "Вадим Чакрян"
+current_role: "Head of Cybersecurity @ DataArt"
+affiliations:
+  - DataArt
+  - School of Ethical Hacking
+  - Security Digest UA
+platforms:
+  linkedin: "https://linkedin.com/in/chakryan"
+  telegram: "https://t.me/securitydigestua"
+  youtube: ""
+  github: ""
+content_language: [uk, en]
+activity_status: active
+audience_focus: [intermediate, advanced, regulatory]
+
+metrics_raw:
+  academic_depth: 4
+  practical_impact: 5
+  educational_activity: 5
+  regulatory_audit_fit: 4
+  ua_context_relevance: 5
+
+notes: |
+  Ключовий профіль для AuditorSEC v0.1 пілоту.
+  Унікальне поєднання: PhD (телеком) + практична роль Head of Cyber
+  + освітня школа + медіа-канал.
+  Найсильніший кандидат як "anchor expert" для
+  регуляторного/аудиторського виміру UA кіберспільноти.
+  Публікації з risk-aware routing та sentiment/malicious
+  content detection резонують з AuditorSEC-QML.
+
+verdict_tags:
+  - CISSP-anchor
+  - KI-telecom-expert
+  - UA-edu-leader
+  - risk-aware-routing-RnD
+  - Security-Digest-UA-founder
+
+recommended_for:
+  - "розробка освітніх програм (НУРЕ, муніципальні хаби)"
+  - "аудит КІ / консультант"
+  - "розробка регуляторних стандартів UA"
+  - "AuditorSEC-QML партнер з досліджень"
+
+# Розрахований AuditorSEC score:
+# academic_depth:        4 * 0.20 = 0.80
+# practical_impact:      5 * 0.25 = 1.25
+# educational_activity:  5 * 0.20 = 1.00
+# regulatory_audit_fit:  4 * 0.20 = 0.80
+# ua_context_relevance:  5 * 0.15 = 0.75
+# TOTAL: 4.60 / 5.00 → audit_fit: HIGH
